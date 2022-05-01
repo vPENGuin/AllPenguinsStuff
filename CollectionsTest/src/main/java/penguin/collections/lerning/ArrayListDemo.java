@@ -5,7 +5,7 @@ import java.util.List;
 
 public class ArrayListDemo {
     public static void main(String[] args) {
-        List <Integer> nums = new ArrayList<>();
+        List<Integer> nums = new ArrayList<>();
 
         nums.add(2);
         nums.add(6);
@@ -26,7 +26,7 @@ public class ArrayListDemo {
         nums.remove(new Integer(52));
         System.out.println(nums);
 
-        nums.set(6,735);
+        nums.set(6, 735);
         System.out.println(nums);
     }
 }

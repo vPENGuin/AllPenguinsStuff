@@ -5,7 +5,7 @@ import java.util.List;
 
 public class LinkedListDemo {
     public static void main(String[] args) {
-        LinkedList <Integer> linkedNums = new LinkedList<>();
+        LinkedList<Integer> linkedNums = new LinkedList<>();
         linkedNums.add(532);
         linkedNums.add(765);
         linkedNums.add(6523);
@@ -28,9 +28,9 @@ public class LinkedListDemo {
         linkedNums.addLast(48);
         System.out.println(linkedNums);
 
-        linkedNums.add(linkedNums.size() / 2,52);
+        linkedNums.add(linkedNums.size() / 2, 52);
         System.out.println(linkedNums);
 
-
+        System.out.println(linkedNums.get(linkedNums.size() / 2));
     }
 }

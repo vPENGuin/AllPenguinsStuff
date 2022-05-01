@@ -1,4 +1,4 @@
-package penguin.collections.lerning;
+package penguin.collections.learning;
 
 import java.util.ArrayList;
 import java.util.List;

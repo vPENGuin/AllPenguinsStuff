@@ -1,4 +1,4 @@
-package penguin.collections.lerning;
+package penguin.collections.learning;
 
 import java.util.HashSet;
 import java.util.Random;

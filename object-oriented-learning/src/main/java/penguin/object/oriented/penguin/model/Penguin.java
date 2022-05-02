@@ -1,4 +1,4 @@
-package penguin.object.oriented.model;
+package penguin.object.oriented.penguin.model;
 
 //ПРЕДОК - общий класс, общее описание чего-то
 //для того, чтобы объявлять общие поля и методы

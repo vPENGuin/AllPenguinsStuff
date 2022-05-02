@@ -1,6 +1,6 @@
-package penguin.object.oriented.model.child;
+package penguin.object.oriented.penguin.model.child;
 
-import penguin.object.oriented.model.Penguin;
+import penguin.object.oriented.penguin.model.Penguin;
 
 // child - наследник, ребенок
 // расширяет свойства предка, добавляет уникальные / специфичные поля,

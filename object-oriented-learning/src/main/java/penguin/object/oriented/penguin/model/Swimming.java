@@ -1,4 +1,4 @@
-package penguin.object.oriented.model;
+package penguin.object.oriented.penguin.model;
 
 // абстрактные методы, которые ОБЯЗАТЕЛЬНО нужно реализовать
 // если реализуешь этот интерфейс

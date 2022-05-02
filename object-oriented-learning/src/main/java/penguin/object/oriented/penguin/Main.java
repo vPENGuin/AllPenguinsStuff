@@ -1,10 +1,10 @@
-package penguin.object.oriented;
+package penguin.object.oriented.penguin;
 
-import penguin.object.oriented.model.Fish;
-import penguin.object.oriented.model.Penguin;
-import penguin.object.oriented.model.Swimming;
-import penguin.object.oriented.model.child.African;
-import penguin.object.oriented.model.child.Emperor;
+import penguin.object.oriented.penguin.model.Fish;
+import penguin.object.oriented.penguin.model.Penguin;
+import penguin.object.oriented.penguin.model.Swimming;
+import penguin.object.oriented.penguin.model.child.African;
+import penguin.object.oriented.penguin.model.child.Emperor;
 
 public class Main {
     public static void main(String[] args) {

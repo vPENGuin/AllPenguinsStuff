@@ -37,6 +37,7 @@ public class Cycles {
         } while (isRunning);
 
         // foreach - обхода коллекций И массивов и всего, что можно обойти
+        // implements Iterable<>
         // 0 1 2 3 4 5 6 ...
         for (String string : strings) {
             System.out.println(string);

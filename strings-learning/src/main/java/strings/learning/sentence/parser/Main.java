@@ -25,37 +25,61 @@ public class Main {
         System.out.println("3. Вывод текста: " + sentence);
 
         String spam = "спам";
-        sentence = sentence.toLowerCase()
-                .replaceAll(spam, "")
-                .replaceAll(" {2}", " ")
-                .trim();
+        sentence = removeWord(sentence, spam);
         System.out.println("4. " + sentence);
 
-        char firstSymbol = sentence.charAt(0);
-        if (Character.isLowerCase(firstSymbol)) {
-            char upLetter = Character.toUpperCase(firstSymbol);
-            sentence = sentence.replaceFirst(firstSymbol + "", upLetter + "");
-            System.out.println("5. " + sentence);
-        }
+        sentence = symbolToUpperCase(sentence, 0);
+        System.out.println("5. " + sentence);
 
+        sentence = placeDot(sentence);
+        System.out.println("6. " + sentence);
+
+        sentence = placeComma(sentence);
+        System.out.println("7. " + sentence);
+
+        String parser = "парсер";
+        findWord(sentence, parser);
+    }
+
+    private static void findWord(String sentence, String word) {
+        int wordIndex = sentence.indexOf(word);
+        if (wordIndex >= 0) {
+            System.out.println("8. Предложение содержит слово " + word + " на " + wordIndex + " индексе");
+        } else {
+            System.out.println("8. Предложение не содержит слово " + word);
+        }
+    }
+
+    private static String placeComma(String sentence) {
+        int spaceIndex = sentence.indexOf(" ");
+        if (spaceIndex > 0 && sentence.charAt(spaceIndex - 1) != ',' && sentence.charAt(spaceIndex + 1) != ','
+                && sentence.split(" ").length > 1) {
+            sentence = sentence.replaceFirst(" ", ", ");
+        }
+        return sentence;
+    }
+
+    private static String placeDot(String sentence) {
         char lastSymbol = sentence.charAt(sentence.length() - 1);
         if (lastSymbol != '.') {
             sentence = sentence + ".";
-            System.out.println("6. " + sentence);
         }
+        return sentence;
+    }
 
-        int index = sentence.indexOf(" ");
-        if (index > 0 && sentence.charAt(index - 1) != ',' && sentence.charAt(index + 1) != ','
-                && sentence.split(" ").length > 1) {
-            sentence = sentence.replaceFirst(" ", ", ");
-            System.out.println("7. " + sentence);
+    private static String symbolToUpperCase(String sentence, int index) {
+        char symbol = sentence.charAt(index);
+        if (Character.isLowerCase(symbol)) {
+            char upSymbol = Character.toUpperCase(symbol);
+            sentence = sentence.replaceFirst(symbol + "", upSymbol + "");
         }
+        return sentence;
+    }
 
-        int parserIndex = sentence.indexOf("парсер");
-        if (parserIndex >= 0) {
-            System.out.println("8. Предложение содержит слово парсер на " + parserIndex + " индексе");
-        } else {
-            System.out.println("8. Предложение не содержит слово парсер");
-        }
+    private static String removeWord(String sentence, String word) {
+        return sentence.toLowerCase()
+                .replaceAll(word, "")
+                .replaceAll(" {2}", " ")
+                .trim();
     }
 }

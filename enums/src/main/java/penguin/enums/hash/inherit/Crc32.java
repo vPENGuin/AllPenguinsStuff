@@ -1,4 +1,4 @@
-package penguin.enums.hash.tree;
+package penguin.enums.hash.inherit;
 
 import com.google.common.hash.Hashing;
 

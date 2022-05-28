@@ -1,4 +1,4 @@
-package penguin.enums.hash.tree;
+package penguin.enums.hash.inherit;
 
 import java.util.HashMap;
 

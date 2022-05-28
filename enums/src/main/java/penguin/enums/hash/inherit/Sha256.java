@@ -1,13 +1,13 @@
-package penguin.enums.hash.tree;
+package penguin.enums.hash.inherit;
 
 import com.google.common.hash.Hashing;
 
 import java.nio.charset.StandardCharsets;
 
-public class Md5 extends HashAlgParent {
+public class Sha256 extends HashAlgParent {
     @Override
     public String hash(String message) {
-        return Hashing.md5()
+        return Hashing.sha256()
                 .hashString(message, StandardCharsets.UTF_8)
                 .toString();
     }
@@ -18,6 +18,6 @@ public class Md5 extends HashAlgParent {
     }
 
     public String getName() {
-        return "MD5";
+        return "SHA256";
     }
 }

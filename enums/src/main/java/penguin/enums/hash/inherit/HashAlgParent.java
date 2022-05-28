@@ -1,4 +1,4 @@
-package penguin.enums.hash.tree;
+package penguin.enums.hash.inherit;
 
 public abstract class HashAlgParent {
     public abstract String hash(String message);

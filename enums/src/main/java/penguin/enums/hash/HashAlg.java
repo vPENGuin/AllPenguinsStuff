@@ -30,6 +30,14 @@ public enum HashAlg {
                     .hashString(message,StandardCharsets.UTF_8)
                     .toString();
         }
+    },
+    CRC32(true) {
+        @Override
+        public String hash(String message) {
+            return Hashing.crc32()
+                    .hashString(message,StandardCharsets.UTF_8)
+                    .toString();
+        }
     };
 
     private final boolean secure;

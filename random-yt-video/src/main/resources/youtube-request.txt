@@ -1,0 +1,14 @@
+curl 'https://www.youtube.com/youtubei/v1/search' \
+  -H 'content-type: application/json' \
+  --data-raw '{
+      "context":
+      {
+          "client":
+          {
+              "clientName": "WEB",
+              "clientVersion": "2.20220527.00.00",
+          }
+      },
+      "query": "a",
+      "params": "CAISBAgBEAE%3D"
+  }'

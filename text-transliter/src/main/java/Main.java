@@ -46,7 +46,7 @@ public class Main {
         charRu.put('я', "ya");
 
         Path path = Paths.get(
-"C:\\Users\\vp3ru\\OneDrive\\Documents\\JavaHuava\\AllPenguinsStuff\\text-transliter\\src\\main\\resources\\readhere");
+                "C:\\Users\\vp3ru\\OneDrive\\Documents\\JavaHuava\\AllPenguinsStuff\\text-transliter\\src\\main\\resources\\readhere");
 
         String read = String.join("\n", Files.readAllLines(path));
 
@@ -54,10 +54,10 @@ public class Main {
         for (int i = 0; i < read.length(); i++) {
             char ruChar = read.charAt(i);
             String latinText = charRu.get(Character.toLowerCase(ruChar));
-            if (latinText == null){
+            if (latinText == null) {
                 latinText = ruChar + "";
             }
-            if (Character.isUpperCase(ruChar)){
+            if (Character.isUpperCase(ruChar)) {
                 latinText = latinText.toUpperCase();
             }
             stringBuilder.append(latinText);
